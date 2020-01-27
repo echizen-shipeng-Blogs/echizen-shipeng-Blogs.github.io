@@ -330,6 +330,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -555,6 +556,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: 'c55f373dcf9bfa0b3344',
+      clientSecret: 'aef405cc8e3789a333b0d4db15f711c80f75f7ed',
+      repo: 'echizen-shipeng-Blogs.github.io',
+      owner: 'echizen-shipeng-Blogs',
+      admin: ['echizen-shipeng-Blogs'],
+      id: '946b1fe5edd1c917106c86d8c9a4256c',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
